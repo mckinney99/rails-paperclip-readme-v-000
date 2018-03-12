@@ -633,3 +633,19 @@ Processing by AuthorsController#new as HTML
   Rendered authors/_form.html.erb (3.1ms)
   Rendered authors/new.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 35ms (Views: 22.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/authors" for 97.90.241.28 at 2018-03-12 16:02:35 +0000
+Cannot render console from 97.90.241.28! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vhUO6w7itEBKup1d4IxEd3+SHNr9oyHEOSyQ5ZBFe+6BFais7cT6P1270io3IwqwigXb+a/LwTgMT1mZgsZpWA==", "author"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x000000031c8dd0 @tempfile=#<Tempfile:/tmp/RackMultipart20180312-1213-1sydge4.JPG>, @original_filename="IMG_0736.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"author[avatar]\"; filename=\"IMG_0736.JPG\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"eee", "bio"=>"eee"}, "commit"=>"Create Author"}
+[paperclip] Trying to link /tmp/RackMultipart20180312-1213-1sydge4.JPG to /tmp/d736334926f04814fcb86d835206d6ac20180312-1213-1f0erue.JPG
+[paperclip] Trying to link /tmp/d736334926f04814fcb86d835206d6ac20180312-1213-1f0erue.JPG to /tmp/d736334926f04814fcb86d835206d6ac20180312-1213-gb0x8h.JPG
+Command :: file -b --mime '/tmp/d736334926f04814fcb86d835206d6ac20180312-1213-gb0x8h.JPG'
+  [1m[35m (0.1ms)[0m  begin transaction
+[paperclip] Trying to link /tmp/d736334926f04814fcb86d835206d6ac20180312-1213-1f0erue.JPG to /tmp/d736334926f04814fcb86d835206d6ac20180312-1213-1k643nx.JPG
+Command :: file -b --mime '/tmp/d736334926f04814fcb86d835206d6ac20180312-1213-1k643nx.JPG'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "authors" ("bio", "name", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["bio", "eee"], ["name", "eee"], ["avatar_file_name", "IMG_0736.JPG"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 875397], ["avatar_updated_at", "2018-03-12 16:02:35.081180"], ["created_at", "2018-03-12 16:02:35.100594"], ["updated_at", "2018-03-12 16:02:35.100594"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://67.205.130.239:44830/authors/5
+Completed 302 Found in 48ms (ActiveRecord: 4.7ms)
